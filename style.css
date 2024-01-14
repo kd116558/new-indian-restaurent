@@ -1,3 +1,10 @@
+/*
+
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --orange: orange;
     --white: #fff;
@@ -7,37 +14,53 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     overflow-x: hidden;
 }
 
 body {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 
 }
 
 .header {
     background-color: var(--orange);
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border: 1px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px;
     position: fixed;
     top: 0;
-    box-shadow: 1px 5px 5px orange;
+    -webkit-box-shadow: 1px 5px 5px orange;
+            box-shadow: 1px 5px 5px orange;
     z-index: 999;
 }
 
 .logo {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     color: #000;
     font-size: 3.5vw;
@@ -46,19 +69,33 @@ body {
 }
 
 .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 50%;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 
 }
 
 .link_ul {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     list-style: none;
     gap: 8px;
 
@@ -67,6 +104,8 @@ body {
 }
 
 .link_li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -94,8 +133,11 @@ body {
 section {
     width: 100%;
     height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--orange)), color-stop(var(--white)), to(var(--Green)));
+    background: -o-linear-gradient(var(--orange), var(--white), var(--Green));
     background: linear-gradient(var(--orange), var(--white), var(--Green));
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     overflow: hidden;
 }
 
@@ -104,20 +146,35 @@ section {
     height: 90vh;
     margin-top: 19px;
     border-top: 2px solid orange;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 9px;
     padding: 30px 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .headname {
     width: 50%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
     text-align: right;
     font-size: 9vw;
     color: #fff;
@@ -126,12 +183,18 @@ section {
     -webkit-text-stroke-width: 5px;
     text-shadow: 5px 5px 5px #000;
     text-decoration: underline;
-    transform: translateX(-150%);
+    -webkit-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
 }
 
 .scroll .headname {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 .headimg {
@@ -139,13 +202,20 @@ section {
     height: 500px;
     margin-right: 5px;
     rotate: 45deg;
-    filter: drop-shadow(5px 5px 5px #000);
-    transform: translateX(150%);
+    -webkit-filter: drop-shadow(5px 5px 5px #000);
+            filter: drop-shadow(5px 5px 5px #000);
+    -webkit-transform: translateX(150%);
+        -ms-transform: translateX(150%);
+            transform: translateX(150%);
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
 }
 
 .scroll .headimg {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 
@@ -154,44 +224,72 @@ section {
     width: 30vmax;
     height: 30vmax;
     margin-right: 5px;
-    box-shadow: 5px 5px 5px #000;
-    transform: translateX(-150%);
+    -webkit-box-shadow: 5px 5px 5px #000;
+            box-shadow: 5px 5px 5px #000;
+    -webkit-transform: translateX(-150%);
+        -ms-transform: translateX(-150%);
+            transform: translateX(-150%);
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
 }
 
 .scroll .aboutpic {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 .aboutcontent {
     padding: 10px;
     width: 30vmax;
     height: 30vmax;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: justify;
     font-size: 3vw;
     color: #000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+        -ms-transform: translateX(150%);
+            transform: translateX(150%);
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
 }
 
 .scroll .aboutcontent {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 /*Gellary*/
 
 .gellary {
     width: 70%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .image {
@@ -201,7 +299,11 @@ section {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: x-large;
     padding: 5px;
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
 
 
@@ -210,7 +312,9 @@ section {
 .scroll .image {
     width: 30vmax;
     height: 15vmax;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
 }
 
 .image>span {
@@ -252,7 +356,8 @@ section {
     height: 100%;
     color: #000;
     background: #ffffffb7;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 
 }
 
@@ -262,14 +367,20 @@ section {
     width: 1%;
     height: 1%;
     border-radius: 10px;
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
-    transform: translateX(-150%) rotate(360deg);
+    -webkit-transform: translateX(-150%) rotate(360deg);
+        -ms-transform: translateX(-150%) rotate(360deg);
+            transform: translateX(-150%) rotate(360deg);
 }
 
 .scroll .container .formimage {
     width: 50%;
     height: 50%;
-    transform: translateX(0) rotate(0deg);
+    -webkit-transform: translateX(0) rotate(0deg);
+        -ms-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
 }
 
 .form {
@@ -277,20 +388,32 @@ section {
     height: 0px;
     border: 1px solid #000;
     border-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background: rgba(255, 255, 255, 0.637);
-    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
     gap: 5px;
     padding: 5px;
+    -webkit-transition: all 0.8s linear;
+    -o-transition: all 0.8s linear;
     transition: all 0.8s linear;
-    transform: translateX(150%) rotate(360deg);
+    -webkit-transform: translateX(150%) rotate(360deg);
+        -ms-transform: translateX(150%) rotate(360deg);
+            transform: translateX(150%) rotate(360deg);
 }
 
 .scroll .container .form {
     width: 300px;
     height: 50%;
-    transform: translateX(0) rotate(0deg);
+    -webkit-transform: translateX(0) rotate(0deg);
+        -ms-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
 }
 
 .form>span {
@@ -303,11 +426,20 @@ section {
 
 .newform {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     gap: 5px;
 }
 
@@ -337,14 +469,16 @@ label {
     border: 1px solid black;
     background: skyblue;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px black;
+    -webkit-box-shadow: 2px 2px 2px black;
+            box-shadow: 2px 2px 2px black;
     font-size: 2vw;
 }
 
 .submit:hover {
     border: 1px solid #000;
     background-color: greenyellow;
-    box-shadow: 2px 2px 2px #000;
+    -webkit-box-shadow: 2px 2px 2px #000;
+            box-shadow: 2px 2px 2px #000;
     cursor: pointer;
 }
 
@@ -357,23 +491,36 @@ label {
     margin-top: 10vh;
     width: 100%;
     height: 90vmax;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .dettailsnn {
     width: 100%;
     height: 40vh;
     border: 1px solid #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 }
 .dettailsnn marquee{
     width: 100%;
     height: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
    
 
 }
@@ -381,10 +528,19 @@ marquee ul{
     width: 100%;
     height: 100%;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column ;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column ;
+            flex-direction: column ;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 marquee ul li{
     font-size: 3vw ;
@@ -399,6 +555,8 @@ footer {
 
     width: 100%;
     height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
     padding: 5px;
@@ -408,9 +566,15 @@ footer {
     width: 50%;
     height: 100%;
     background: #0000008a;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 10px;
 }
 
@@ -437,10 +601,18 @@ footer {
 .socialicon {
     margin-top: 30px;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 20px;
     color: #fff;
 
