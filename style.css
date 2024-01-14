@@ -1,0 +1,485 @@
+:root {
+    --orange: orange;
+    --white: #fff;
+    --Green: rgb(30, 172, 30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    box-sizing: border-box;
+
+}
+
+.header {
+    background-color: var(--orange);
+    width: 100%;
+    height: fit-content;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 5px 5px orange;
+    z-index: 999;
+}
+
+.logo {
+    width: fit-content;
+    height: fit-content;
+    color: #000;
+    font-size: 3.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
+}
+
+.navbar {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+
+}
+
+.link_ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    list-style: none;
+    gap: 8px;
+
+
+
+}
+
+.link_li {
+    width: fit-content;
+}
+
+.link {
+    font-size: 2.5vw;
+    color: black;
+    font-style: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+
+
+}
+
+.link:hover {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+}
+
+.navicon {
+
+    display: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--orange), var(--white), var(--Green));
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
+    margin-top: 19px;
+    border-top: 2px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+.headname {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    font-size: 9vw;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 5px;
+    text-shadow: 5px 5px 5px #000;
+    text-decoration: underline;
+    transform: translateX(-150%);
+    transition: all 0.8s linear;
+}
+
+.scroll .headname {
+    transform: translateX(0);
+}
+
+.headimg {
+    width: 500px;
+    height: 500px;
+    margin-right: 5px;
+    rotate: 45deg;
+    filter: drop-shadow(5px 5px 5px #000);
+    transform: translateX(150%);
+    transition: all 0.8s linear;
+}
+
+.scroll .headimg {
+    transform: translateX(0);
+}
+
+
+/*about */
+.aboutpic {
+    width: 30vmax;
+    height: 30vmax;
+    margin-right: 5px;
+    box-shadow: 5px 5px 5px #000;
+    transform: translateX(-150%);
+    transition: all 0.8s linear;
+}
+
+.scroll .aboutpic {
+    transform: translateX(0);
+}
+
+.aboutcontent {
+    padding: 10px;
+    width: 30vmax;
+    height: 30vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 3vw;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transform: translateX(150%);
+    transition: all 0.8s linear;
+}
+
+.scroll .aboutcontent {
+    transform: translateX(0);
+}
+
+/*Gellary*/
+
+.gellary {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 1vmax;
+    height: 1vmax;
+    border: 1px solid #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    padding: 5px;
+    transform: rotate(360deg);
+    transition: all 0.8s linear;
+
+
+}
+
+.scroll .image {
+    width: 30vmax;
+    height: 15vmax;
+    transform: rotate(0deg);
+}
+
+.image>span {
+
+    width: 100%;
+    height: 100%;
+}
+
+.m1 {
+    background: url("images/north\ indian\ food.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.m2 {
+    background: url("images/south\ indian\ food.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.m3 {
+    background: url("images/east\ indian.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.m4 {
+    background: url("images/west\ indian\ food.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ll {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    background: #ffffffb7;
+    backdrop-filter: blur(10px);
+
+}
+
+/*form */
+
+.formimage {
+    width: 1%;
+    height: 1%;
+    border-radius: 10px;
+    transition: all 0.8s linear;
+    transform: translateX(-150%) rotate(360deg);
+}
+
+.scroll .container .formimage {
+    width: 50%;
+    height: 50%;
+    transform: translateX(0) rotate(0deg);
+}
+
+.form {
+    width: 0px;
+    height: 0px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(100px);
+    gap: 5px;
+    padding: 5px;
+    transition: all 0.8s linear;
+    transform: translateX(150%) rotate(360deg);
+}
+
+.scroll .container .form {
+    width: 300px;
+    height: 50%;
+    transform: translateX(0) rotate(0deg);
+}
+
+.form>span {
+    width: 100%;
+    font-size: x-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.newform {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+}
+
+label {
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Name {
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.datetime {
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.submit {
+    margin-top: 15px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    background: skyblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    font-size: 2vw;
+}
+
+.submit:hover {
+    border: 1px solid #000;
+    background-color: greenyellow;
+    box-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+}
+
+
+
+/*contact*/
+
+
+.live {
+    margin-top: 10vh;
+    width: 100%;
+    height: 90vmax;
+    display: flex;
+    flex-direction: column;
+}
+
+.dettailsnn {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.dettailsnn marquee{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+   
+
+}
+marquee ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+marquee ul li{
+    font-size: 3vw ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color :blue;
+}
+
+
+
+
+footer {
+
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.contactdetails {
+    width: 50%;
+    height: 100%;
+    background: #0000008a;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.contactdetails>span {
+    width: 100%;
+    color: #fff;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.ICONS {
+    width: 5VW;
+    height: 5vh;
+    font-size: 5VW;
+    color: #fff;
+}
+
+
+.number>span {
+    font-size: 3vw;
+    color: #fff;
+}
+
+.socialicon {
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+
+}
+
+.love {
+    font-size: 5vw;
+}
+
+.instagram:hover {
+    color: pink;
+    cursor: pointer;
+
+}
+
+.youtube:hover {
+    color: red;
+    cursor: pointer;
+
+
+}
+
+.facebook:hover {
+    color: blue;
+    cursor: pointer;
+
+
+}
+
+.twitter:hover {
+    color: skyblue;
+    cursor: pointer;
+
+
+}
+
+
+.map {
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+}
